@@ -1,0 +1,300 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+#imagL{
+    border-radius: 50%;
+}
+.carrito{
+    margin-left: 320px;
+    height: 120%;
+}
+.navbar {
+    background: #f8f9fa; /* Color claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-brand img {
+    height: 60px; /* Tamaño del logo más grande */
+    margin-right: 15px;
+}
+
+.navbar-brand h4 {
+    font-size: 22px; /* Texto más grande */
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.navbar-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.back-button {
+    font-size: 24px; /* Icono más grande */
+    color: #333;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    color: #65051B; /* Color azul al pasar el mouse */
+}
+.btn-custom {
+    background-color: #65051B !important;
+    border-color: #65051B !important;
+    color: white !important;
+}
+
+
+.btn-custom:hover {
+    background-color: #8A0625 !important; /* Color más claro al pasar el mouse */
+    border-color: #8A0625 !important;
+}
+
+.modal-content {
+    color: #65051B !important; /* Aplica el color al texto */
+
+}
+
+/* Opcional: Cambiar el color del encabezado del modal */
+.modal-header {
+    background-color: #f8f9fa; /* Fondo claro para contraste */
+    border-bottom: 2px solid #65051B; /* Borde inferior del modal */
+}
+
+
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.cart-container h1 {
+    text-align: center;
+    color: #65051B;
+    font-size: 300%;
+}
+
+.cart-header, .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.cart-header {
+    background-color: #65051B;
+    color: white;
+}
+
+.cart-item {
+    background-color: #fff;
+}
+
+.product-name {
+    display: flex;
+    align-items: center;
+}
+.product-name img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.remove-btn {
+    margin-right: 10px;
+    background-color: #65051B;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #65051B;
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 15%;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;  /* This will place one button on each end */
+    margin-top: 20px;
+    padding: 0 20px;  /* Adding padding to ensure the buttons don't touch the edge */
+   
+}
+
+.action-btn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #65051B;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 150%;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+.fondo2{
+    position: absolute; /* Necesario para posicionar elementos dentro */
+    background: url('../imgs/image.png') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+    height: 13%; /* Ajusta la altura como necesites */
+    color: white; /* Color del texto */
+    text-align: left; /* Cambiar alineación del texto */
+    display: flex;
+    justify-content: flex-start; /* Alinear a la izquierda horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding-left: 50px; /* Añadir espacio desde la izquierda */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 96.7%;
+}
+.imagen-adicional2{
+    margin-left: 20px;
+    width: 10px;
+    border-radius: 50px;
+    flex: 1;
+    display: flex;
+}
+
+.texto-encima2{
+    flex: 1;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 'Roboto';
+    margin-left: 20px;
+}
+.texto-encima2 img{
+    margin-left: 40px;
+    width: 11%;
+    border-radius: 50px;
+}
+
+.texto-encima2 h3 {
+    margin: 0;
+    font-family: 'Rambla', sans-serif;
+}
+.imgfooter{
+    width: 5%;
+    margin-left: 8%;
+}
+/* Styles for the cart table */
+.cart-container {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart-table th,
+#cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #555;
+}
+
+#cart-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#cart-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+#cart-table input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.action-btn {
+    background-color: #800020; /* Maroon color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-btn:hover {
+    background-color: #600015;
+}
+
+.cart-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Style for the "Eliminar" button */
+.eliminar-btn {
+    background-color: #d3d3d3; /* Light gray background */
+    color: #70041d; 
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.eliminar-btn:hover {
+    background-color: #c0c0c0; /* Slightly darker gray on hover */
+}

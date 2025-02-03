@@ -1,0 +1,213 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.top-bar {
+    background-color: #65051B; /* Dark red color */
+    height: 30px; /* Adjust the height as needed */
+    width: 100%; /* Ensures it stretches across the entire width */
+    margin: 0; /* No margin */
+    padding-left: 20%;
+    padding: 0; 
+   
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 12%;
+    margin-bottom: 50px;
+    border-bottom: 2px solid black; /* Agrega un borde sólido negro */
+    margin-top: 10px;
+    padding-left: 20%;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+nav h1, nav h4 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #65051B;
+}
+nav h4{
+    margin-left: 50px;
+    text-align: center;
+}
+nav h1{
+    text-align: start;
+}
+nav img {
+    width: auto; /* Ajustar automáticamente el ancho */
+    height: 200%; /* Establecer altura relativa */
+    margin-left: 20px;
+    border-radius: 50%;
+}
+.logo{
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+    margin-left: 90px;
+    font-size: 23px;
+    font-family: 'Rambla', sans-serif;
+    font-weight: bold;
+}
+.carrito{
+    margin-left: 20%;
+    margin-bottom: 30px;
+    height: 60%;
+    font-weight: bolder;
+}
+.navtabla{
+    color: black;
+    font-size: 28px;
+    font-weight: 2500;
+    font-family: 'Rambla';
+}
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.cart-container h1 {
+    text-align: center;
+    color: #65051B;
+    font-size: 300%;
+}
+.cart-container h3{
+    text-align: center;
+    color: #65051B;
+    font-size: 150%;
+}
+
+.nombre {
+    margin-top: 100px;  /* Reduced margin-top from 100px to 20px */
+    font-size: 30px;
+    text-align: center;
+    color: #65051B;
+}
+
+.nombre p {
+    margin-right: 42%;
+    margin-bottom: 10px;  /* Add a small margin below the h4 to keep it tight with the input */
+}
+
+.nombre input[type="text"] {
+    font-size: 20px;  /* Adjust the font size to match the h4 if needed */
+    padding: 5px 10px;  /* Provide some padding inside the input for better text visibility */
+    width: 50%;  /* Adjust width according to your design preference */
+    margin: auto;  /* Center the input field if desired */
+    display: block;  /* This will make the input take its own line */
+    height: 40px;
+    background-color: #DCE0DF;
+}
+.cart-actions {
+    display: flex;
+    justify-content: center;  /* This will place one button on each end */
+
+    padding: 0 20px;  /* Adding padding to ensure the buttons don't touch the edge */
+    margin-bottom: 20px;
+}
+.cart-actions2 {
+    display: flex;
+    justify-content: center;  /* This will place one button on each end */
+
+    padding: 0 20px;  /* Adding padding to ensure the buttons don't touch the edge */
+    margin-bottom: 8%;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #65051B;
+    border: none;
+    cursor: pointer;
+ 
+    font-size: 150%;
+   
+    width: 150px;
+    border-radius: 10px;
+}
+
+.cart-actions h1{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #65051B;
+    font-weight: 900;
+    font-size: 30px;
+}
+.fondo2{
+    position: absolute; /* Necesario para posicionar elementos dentro */
+    background: url('../imgs/image.png') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+    height: 13%; /* Ajusta la altura como necesites */
+    color: white; /* Color del texto */
+    text-align: left; /* Cambiar alineación del texto */
+    display: flex;
+    justify-content: flex-start; /* Alinear a la izquierda horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding-left: 50px; /* Añadir espacio desde la izquierda */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 96.7%;
+}
+.imagen-adicional2{
+    margin-left: 20px;
+    width: 10px;
+    border-radius: 50px;
+    flex: 1;
+    display: flex;
+}
+
+.texto-encima2{
+    flex: 1;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 'Roboto';
+    margin-left: 20px;
+}
+.texto-encima2 img{
+    margin-left: 40px;
+    width: 11%;
+    border-radius: 50px;
+}
+
+.texto-encima2 h3 {
+    margin: 0;
+    font-family: 'Rambla', sans-serif;
+}
+.imgfooter{
+    width: 5%;
+    margin-left: 8%;
+}

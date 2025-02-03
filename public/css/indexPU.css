@@ -1,0 +1,100 @@
+/* despues */
+.container {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+   
+}
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.texto {
+    flex: 1;
+    text-align: left;
+    color: #65051b;
+}
+.CrearProducto {
+    flex: 1;
+    text-align: right;
+}
+.btnCrear {
+    background-color: #65051b;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+.btnCrear:hover, .btnCrear:focus {
+    background-color: #D28B00;
+    color: white;
+}
+.table {
+    border: 2px solid #65051b;
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+.table thead tr {
+    background-color: #65051b;
+    color: white;
+}
+.table thead th {
+    padding: 5px;
+    text-align: center;
+}
+.table tbody td {
+    padding: 10px;
+    border-top: 1px solid #65051b;
+    font-size: large;
+}
+.btn, .btn a, button.btn {
+    background-color: #65051b;
+    color: white;
+    padding: 5px ;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px;
+    border-radius: 5px;
+}
+.btn:hover, .btn:focus, .btn a:hover, .btn a:focus, button.btn:hover, button.btn:focus {
+    background-color: #D28B00;
+    color: white;
+}
+form button.btn {
+    background-color: #65051b;
+    color: white;
+    padding: 5px ;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px;
+    border-radius: 5px;
+}
+form button.btn:hover, form button.btn:focus {
+    background-color: #D28B00;
+    color: white;
+}
+  a.btn {
+    background-color: #65051b;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 2px;
+}
+a.btn:hover, a.btn:focus {
+    background-color: #D28B00;
+    color: white;
+}
+.imgS{
+    width: 120px;
+    border-radius: 12px;
+}
+.container{
+    border-radius: 15px;
+    }

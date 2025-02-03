@@ -1,0 +1,46 @@
+body{
+    font-family: 'Roboto', sans-serif;
+  }
+  .container{
+    border-radius: 15px;
+    }
+        .titulo{
+          color: #65051b;
+         
+        }
+        .contenido{
+           background-color: #9D7980; 
+           padding: 30px;
+           border-radius: 15px;
+           color: white;
+        }
+        .btn, .btn a, button.btn {
+            background-color: #65051b;
+            color: white;
+            padding: 5px ;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .btn:hover, .btn:focus, .btn a:hover, .btn a:focus, button.btn:hover, button.btn:focus {
+            background-color: #D28B00;
+            color: white;
+        }
+        form button.btn {
+            background-color: #65051b;
+            color: white;
+            padding: 5px ;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        form button.btn:hover, form button.btn:focus {
+            background-color: #D28B00;
+            color: white;
+        }
+  

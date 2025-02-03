@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer scroll */
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo más sólido al hacer scroll */
+}
+
+.img-fluid{
+    width: 80%; 
+    height: auto;
+}
+.texto-encima {
+    flex: 1; /* Ocupa la mitad izquierda */
+    color: white;
+    margin-left: 100px;
+    padding: 20px;
+    font-size: 54px;
+    margin-bottom: 15%;
+    margin-top: 7%;
+}
+
+.texto-encima h2 {
+    font-size: 1.5em;
+    margin: 0;
+    font-family: 'Rambla', sans-serif;
+}
+
+.texto-encima h3 {
+    margin: 0;
+    font-family: 'Rambla', sans-serif;
+}
+
+.imagen-adicional {
+    flex: 1; 
+    display: flex;
+    
+}
+
+.imagen-adicional img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.productos {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+ 
+}
+
+.pTitulo{
+    color:#65051B;
+   
+}
+#pTitulo2{
+    font-size: 60px;
+}
+#pTitulo3{
+    color:orange ;
+   font-size:30px; 
+}
+.pTitulo4{
+    font-size: 40px;
+    color: #65051B;
+   
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.grid2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid div {
+    flex-basis: 30%;
+}
+
+.grid img {
+    width: 60%;
+    height: 200px; /* Ajusta esto según la necesidad */
+    object-fit: cover; /* Esto mantiene la proporción de las imágenes sin cortarlas */
+}
+.grid2 img{
+    width: 45%;
+}
+
+.buscador {
+    padding: 10px;
+    margin-top: 20px;
+    width: 500px;
+}
+
+.grid,.grid2 p {
+    margin: 5px 0;
+    color: #65051B;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+.about-section {
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; /* Ancho del contenedor principal */
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra alrededor del contenedor */
+    background: #f9f9f9; /* Fondo claro para el contenedor */
+    padding: 20px;
+}
+.content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+  border-radius: 15px;
+  width: 80%;
+  padding-left: 15px;
+}
+
+
+.AcercaTitulo {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #65051B;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+}
+ .product-quantity{
+    display: none;
+} 
+
+.contact-form {
+    flex: 1 1 45%;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical; 
+    min-height: 120px;
+}
+
+.contact-form button {
+    background-color: #DAA520;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #D28B00;
+}
+
+
+.contact-info {
+    width: 400px;
+    background-color: #65051B;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+.contact-info img {
+    width: 350px;
+    height: auto;
+    
+    border-radius: 50%;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 868px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
+
+.section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto; /* Centra la sección en su contenedor padre */
+    padding: 20px; /* Añade un poco de espacio alrededor */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la siguiente fila */
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Aumenta el padding para más espacio interior */
+    width: 350px; /* Aumenta el tamaño de las tarjetas */
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: rgb(113, 17, 49);
+}
+
+.product-price {
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.temporary-quantity span{
+    font-size: x-large;
+    color: rgb(113, 17, 49);
+    font-weight: bold;
+}
+
+.product-quantity,
+.temporary-quantity {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.increment-button {
+    background-color: #ffa407;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 0 auto; /* Centra el botón horizontalmente */
+}
+
+.increment-button:hover {
+    background-color: #e69500;
+}
+
+.increment-button i {
+    margin-right: 8px;
+}
+
+#mascerca{
+    padding-left: 8%;
+}
