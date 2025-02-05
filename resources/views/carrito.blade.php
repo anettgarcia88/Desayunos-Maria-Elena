@@ -24,42 +24,37 @@
             <!-- Logo y título en la misma línea -->
             <a class="navbar-brand d-flex align-items-center" href="{{ route('paghome') }}">
                 <img src="{{ asset('imgs/logo3.png') }}" id="imagL" alt="Logo">
-                <div>
-                    <h4>Desayunos Maria Elena</h4>
-                    <p class="navbar-text">Tienda Desayunos</p>
-                </div>
+               
             </a>
         </div>
     </nav>
-
-    <div class="cart-container">
-        <h1>Carrito</h1>
-        <table id="cart-table">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
-                    <th>Quitar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Filas del carrito se llenarán dinámicamente con JavaScript -->
-            </tbody>
-        </table>
-        <p id="total">Total: Bs 0.00</p>
-        <div class="cart-actions">
-        <!-- Botón para abrir modal de Reservar -->
-    <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modalReservar">
+    <div class="container cart-container">
+        <h1 class="text-center mb-4">Mi carrito</h1>
+        <div class="table-responsive">
+            <table id="cart-table" class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Quitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas del carrito se llenarán dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <p id="total" class="fw-bold text-end">Total: Bs 0.00</p>
+        <div class="cart-actions d-flex justify-content-between align-items-center gap-3">
+    <button type="button" class="btn btn-custom " data-bs-toggle="modal" data-bs-target="#modalReservar">
         Reservar
     </button>
-
-    <!-- Botón para abrir modal de A Domicilio -->
     <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modalDomicilio">
         Domicilio
     </button>
-    </div>  <!--  fin de cart-actions -->
+</div>
     </div>
 
     <!-- Modal de Reservar -->
@@ -126,43 +121,10 @@
     <script src="{{ asset('js/carritoS.js') }}"></script>
     
     <br>
-<div class="footer">
-    <div class="footer-content">
-        <!-- Sección de marca -->
-        <div class="footer-section brand">
-            <h3>Desayunos Maria Elena</h3>
-            <img src="{{ asset('imgs/logo3.png') }}" alt="Logo de Desayunos Maria Elena" class="logo-footer">
-        </div>
 
-        <!-- Sección de contacto -->
-        <div class="footer-section contact">
-            <!-- WhatsApp -->
-            <div class="contact-item">
-                <img src="{{ asset('imgs/wa-removebg-preview (1).png') }}" alt="WhatsApp" class="contact-icon">
-                <p>+59172209617</p>
-            </div>
-
-            <!-- Ubicación con enlace a Google Maps -->
-            <div class="contact-item">
-                <a href="https://maps.app.goo.gl/56mBSRqQqFuqr1LP6" class="alink" target="_blank" rel="noopener noreferrer">
-                    <img src="{{ asset('imgs/abed6cd354d56006bfb22b48c147c70b-removebg-preview.png') }}" alt="Ubicación" class="contact-icon">
-                    <p>Av. Villazón km. 4</p>
-                </a>
-            </div>
-
-            <!-- Facebook con enlace a la página oficial -->
-            <div class="contact-item">
-                <a href="https://www.facebook.com/DesayunosMariaElena" target="_blank" class="alink" rel="noopener noreferrer">
-                    <img src="{{ asset('imgs/face-removebg-preview.png') }}" alt="Facebook" class="contact-icon">
-                    <p>Desayunos Maria Elena</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

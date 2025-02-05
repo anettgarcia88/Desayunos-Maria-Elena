@@ -14,6 +14,8 @@ a {
 }
 #imagL{
     border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 .carrito{
     margin-left: 320px;
@@ -62,6 +64,10 @@ a {
     background-color: #65051B !important;
     border-color: #65051B !important;
     color: white !important;
+    width: 150px !important;
+    font-size: 1.4rem  !important; /* Tamaño de texto más grande */
+    border-radius: 30px !important; /* Bordes más redondeados */
+    padding: 10px !important;
 }
 
 
@@ -81,90 +87,101 @@ a {
     border-bottom: 2px solid #65051B; /* Borde inferior del modal */
 }
 
-
 .cart-container {
-    width: 80%;
-    margin: 0 auto;
-    background-color: white;
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 100px;
 }
 
-.cart-container h1 {
-    text-align: center;
-    color: #65051B;
-    font-size: 300%;
+
+tbody tr, 
+tbody td {
+    border-color: transparent !important;
 }
 
-.cart-header, .cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 2px solid #ddd;
-    font-size: 20px;
-    font-weight: 800;
-}
+@media (max-width: 576px) {
+    #cart-table th, #cart-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
 
-.cart-header {
-    background-color: #65051B;
-    color: white;
-}
-
-.cart-item {
-    background-color: #fff;
-}
-
-.product-name {
-    display: flex;
-    align-items: center;
-}
-.product-name img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.remove-btn {
-    margin-right: 10px;
-    background-color: #65051B;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.cart-total {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    color: #65051B;
-    font-weight: 900;
-    font-size: 30px;
-    margin-top: 15%;
-}
-
-.cart-actions {
-    display: flex;
-    justify-content: space-between;  /* This will place one button on each end */
-    margin-top: 20px;
-    padding: 0 20px;  /* Adding padding to ensure the buttons don't touch the edge */
    
-}
+    .btn-custom {
+        width: 100px !important;
+        font-size: 1.2rem  !important; /* Tamaño de texto más grande */
+        border-radius: 30px !important; /* Bordes más redondeados */
+        padding: 10px !important;
+    }
+   /*
+    #cart-table thead {
+        display: none;
+    }
 
-.action-btn {
-    padding: 10px 20px;
-    color: white;
-    background-color: #65051B;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-    font-size: 150%;
-    width: 150px;
-    border-radius: 10px;
-}
+  
+    #cart-table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        font-size: 1.3rem !important;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(135deg, #f9f9f9, #fff);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.action-btn:hover {
-    opacity: 0.8;
+
+    #cart-table tbody tr:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+  
+    #cart-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 15px;
+        color: #333;
+    }
+
+ 
+    #cart-table tbody td:last-child {
+        border-bottom: none;
+    }
+
+   
+    #cart-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+  
+    #total {
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #212529;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 10px 0;
+    }
+
+ 
+    .cart-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+   */
 }
 
 .fondo2{
@@ -298,3 +315,6 @@ a {
 .eliminar-btn:hover {
     background-color: #c0c0c0; /* Slightly darker gray on hover */
 }
+
+
+

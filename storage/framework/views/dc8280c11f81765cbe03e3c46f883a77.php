@@ -25,7 +25,7 @@
     <!-- Logo y título -->
     <a class="navbar-brand" href="#">
       <img src="<?php echo e(asset('imgs/logo3.png')); ?>" alt="Logo" class="logo" style="height: 50px;">
-      <h1 class="d-inline-block align-middle">Desayunos Maria Elena</h1>
+      <h1 class="d-inline-block align-middle">Apis Elena</h1>
     </a>
     <!-- Toggle Button para pantallas pequeñas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,11 +35,11 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
              <!-- Carrito -->
-             <li class="nav-item">
+             <!-- <li class="nav-item">
           <a class="nav-link" href="<?php echo e(route('carrito')); ?>">
             <img src="<?php echo e(asset('imgs/carrito.png')); ?>" alt="Carrito" class="carrito" style="height: 35px;">
           </a>
-        </li>
+           </li> -->
        
         <!-- Enlace Productos -->
         <li class="nav-item">
@@ -73,11 +73,9 @@
  <br>
     
     <div class="productos" id="productos">
-        <h1 class="pTitulo" id="pTitulo2">Productos</h1>
-        <h3 class="pTitulo" id="pTitulo3">¡Pedí ahora tu Producto!</h3>
-        <!-- <input type="text" class="buscador" placeholder="Buscador de productos..."> -->
-
-        <!-- <h2 class="pTitulo4">Bebidas y Masas</h2> -->
+        <h1 class="AcercaTitulo" id="pTitulo2">Productos</h1>
+        <h3 class="pTitulo" id="pTitulo3">¡Pide ahora tu producto!</h3>
+  
 
      <div class="section">
   
@@ -158,6 +156,13 @@
 </div>
 
 <br>
+<div class="floating-cart">
+    <a  href="<?php echo e(route('carrito')); ?>">
+      <img src="<?php echo e(asset('imgs/carrito.png')); ?>" alt="Carrito">
+    </a>
+  </div>
+
+
 <div class="footer">
     <div class="footer-content">
         <!-- Sección de marca -->

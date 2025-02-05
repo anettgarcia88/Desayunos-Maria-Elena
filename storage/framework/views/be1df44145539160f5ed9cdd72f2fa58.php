@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
     <title>Inicio de Sesión</title>
   </head>
   <body>
@@ -18,10 +18,10 @@
                         <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
                             <div class="card-body p-md-5 mx-md-4">
                                 <div class="text-center mb-4">
-                                    <img src="{{ asset('assets/user.png') }}" style="width: 150px;" alt="logo">
+                                    <img src="<?php echo e(asset('assets/user.png')); ?>" style="width: 150px;" alt="logo">
                                 </div>
-                                <form action="{{ route('login') }}" method="post">
-                                    @csrf
+                                <form action="<?php echo e(route('login')); ?>" method="post">
+                                    <?php echo csrf_field(); ?>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example11">Correo:</label>
                                         <input type="email" name="email" id="form2Example11" class="form-control" required/>
@@ -35,14 +35,14 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center pb-4 flex-column flex-md-row">
                                         <!-- <p class="mb-2 me-md-2">¿No tienes una cuenta?</p> -->
-                                        <!-- <a href="{{ route('register') }}" class="btn btn-outline-danger">Registrarse</a> -->
+                                        <!-- <a href="<?php echo e(route('register')); ?>" class="btn btn-outline-danger">Registrarse</a> -->
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div class="col-md-6 d-flex align-items-center gradient-custom-2 justify-content-center">
                             <div class="text-white text-center px-4 py-4">
-                                <img src="{{ asset('assets/logo1.png') }}" class="img-fluid" alt="logo">
+                                <img src="<?php echo e(asset('assets/logo1.png')); ?>" class="img-fluid" alt="logo">
                             </div>
                         </div>
                     </div>
@@ -55,3 +55,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+<?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\desayunosmariaelena\resources\views/auth/login.blade.php ENDPATH**/ ?>
