@@ -29,7 +29,7 @@
         </div>
     </nav>
     <div class="container cart-container">
-        <h1 class="text-center mb-4">Mi carrito</h1>
+        <h1 class="AcercaTitulo text-center mb-4">Mi carrito</h1>
         <div class="table-responsive">
             <table id="cart-table" class="table table-bordered table-hover">
                 <thead class="table-dark">
@@ -48,11 +48,11 @@
         </div>
         <p id="total" class="fw-bold text-end">Total: Bs 0.00</p>
         <div class="cart-actions d-flex justify-content-between align-items-center gap-3">
-    <button type="button" class="btn btn-custom " data-bs-toggle="modal" data-bs-target="#modalReservar">
-        Reservar
+    <button type="button" class="btn btn-custom" id="Reservar" data-bs-toggle="modal" data-bs-target="#modalReservar">
+    <i class="fa-solid fa-clipboard-list"></i> Reservar
     </button>
     <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modalDomicilio">
-        Domicilio
+    <i class="fa-solid fa-house"></i> Domicilio
     </button>
 </div>
     </div>

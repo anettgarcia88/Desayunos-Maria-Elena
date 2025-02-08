@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center pb-4 flex-column flex-md-row">
                                         <!-- <p class="mb-2 me-md-2">¿No tienes una cuenta?</p> -->
-                                        <!-- <a href="<?php echo e(route('register')); ?>" class="btn btn-outline-danger">Registrarse</a> -->
+                                         <a href="<?php echo e(route('register')); ?>" class="btn btn-outline-danger">Registrarse</a> 
                                     </div>
                                 </form>
                             </div>
@@ -47,12 +47,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 </section>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+   </body>
 </html>
-<?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\desayunosmariaelena\resources\views/auth/login.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\apis_elena\resources\views/auth/login.blade.php ENDPATH**/ ?>

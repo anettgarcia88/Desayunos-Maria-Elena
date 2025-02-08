@@ -7,6 +7,24 @@ html, body {
     flex-direction: column;
     box-sizing: border-box;
 }
+.AcercaTitulo {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #65051B;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+#Reservar{
+    background-color: lightgray !important;
+    color:#65051B !important;
+    border-color: lightgray !important;
+
+}
+#Reservar:hover{
+    background-color: darkgrey !important;
+   
+}
 
 a {
     text-decoration: none;
@@ -56,24 +74,31 @@ a {
     color: #333;
     text-decoration: none;
 }
-
+.fa-solid{
+    margin-right: 5px !important;
+}
 .back-button:hover {
     color: #65051B; /* Color azul al pasar el mouse */
+    box-shadow: 0 12px 24px rgba(104, 104, 104, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); /* Eleva ligeramente el botón */
 }
 .btn-custom {
     background-color: #65051B !important;
     border-color: #65051B !important;
     color: white !important;
-    width: 150px !important;
-    font-size: 1.4rem  !important; /* Tamaño de texto más grande */
+    width: 180px !important;
+    font-size: 1.5rem  !important; /* Tamaño de texto más grande */
     border-radius: 30px !important; /* Bordes más redondeados */
     padding: 10px !important;
+    
 }
 
 
 .btn-custom:hover {
     background-color: #8A0625 !important; /* Color más claro al pasar el mouse */
     border-color: #8A0625 !important;
+    box-shadow: 0 12px 24px rgba(104, 104, 104, 0.1), 0 6px 12px rgba(67, 67, 67, 0.1);
+    transform: translateY(-1px); /* Eleva ligeramente el botón */
 }
 
 .modal-content {

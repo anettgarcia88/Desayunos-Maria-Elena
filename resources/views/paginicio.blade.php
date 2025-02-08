@@ -167,7 +167,7 @@
     <div class="footer-content">
         <!-- Sección de marca -->
         <div class="footer-section brand">
-            <h3>Desayunos Maria Elena</h3>
+            <h3>Apis Elena</h3>
             <img src="{{ asset('imgs/logo3.png') }}" alt="Logo de Desayunos Maria Elena" class="logo-footer">
         </div>
 

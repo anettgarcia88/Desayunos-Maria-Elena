@@ -24,6 +24,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('users', UserController::class);
 });
 
+Route::get('/users/{id}/edit', [UserController::class, 'edit']);
+Route::post('/users', [UserController::class, 'store']);
+Route::post('/users/{id}', [UserController::class, 'update']);
 
 
 //Route::get('/users/{id}', 'UserController@show')->name('users.show');

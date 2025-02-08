@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{{ asset('css/indexPU.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/modals.css') }}">
     <title>Administrar Productos</title>
     
 </head>
@@ -12,39 +13,30 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="encabezado">
-        <div class="texto">
-            <h1>Mis productos</h2>
-           
-        </div>
-        <br>
-        <br>
-        <div class="CrearProducto">
-            <a href="{{ route('productos.create') }}" class="btnCrear">Nuevo producto</a>
-            @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-        </div>  
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="AcercaTitulo">Mis productos</h1>
+        <button type="button" class="btn btn-primary" id="openModalBtn"> 
+            <i class="fas fa-plus"></i> Nuevo producto 
+        </button>
     </div>
 
-    <table class="table">
-        <thead >
+    <div class="table-responsive">
+        <table class="table table-striped table-hover shadow-sm">
+            <thead class="bg-secondary text-light">
             <tr>
-                <th>ID</th>
+                <th>#</th>
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Cantidad comprada</th>
                 <th>Imagen</th>
-                <th>Acciones</th>
+                <th class="text-center">Acciones</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($productos as $producto)
+            @foreach($productos as $index => $producto)
                 <tr>
-                    <td>{{ $producto->id }}</td>
+                    <td>{{ $index + 1 }}</td>
                     <td>{{ $producto->nombre }}</td>
                     <td>{{ $producto->precio }}</td>
                     <td>{{ $producto->cantidad }}</td>

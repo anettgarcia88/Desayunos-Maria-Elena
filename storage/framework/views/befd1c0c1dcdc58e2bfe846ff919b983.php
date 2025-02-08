@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +11,7 @@
     <!-- Título -->
     <div class="text-center mb-4">
         <h1 class="fw-bold text-white">Desayunos Maria Elena</h1>
-        <p class="fs-4 text-secondary">INICIO</p>
+        <p class="fs-4 text-white">INICIO</p>
     </div>
 
     <!-- Sección de opciones -->
@@ -45,4 +44,4 @@
 <?php $__env->stopSection(); ?>   
 </body>
 </html>
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\desayunosmariaelena\resources\views/dashboard.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\apis_elena\resources\views/dashboard.blade.php ENDPATH**/ ?>

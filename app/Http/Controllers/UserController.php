@@ -20,40 +20,39 @@ class UserController extends Controller
 
     return view('users.show', compact('user'));
 }
+
 public function edit($id)
 {
-    if (Auth::id() != $id) {
-        abort(403, 'No autorizado');
-    }
-
     $user = User::findOrFail($id);
-
-    return view('profile.edit', compact('user'));
+    return response()->json($user);
 }
 
 public function update(Request $request, $id)
 {
-    if (Auth::id() != $id) {
-        abort(403, 'No autorizado');
-    }
-
-    $user = User::findOrFail($id);
-
-    $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
-        'password' => 'nullable|string|min:8|confirmed',
+    // Validar los datos recibidos
+    $validated = $request->validate([
+        'firstName' => 'required|string|max:255',
+        'lastName' => 'required|string|max:255',
+        'secondLastName' => 'required|string|max:255',
+        'email' => 'required|email|max:255|unique:users,email,'.$id,
     ]);
 
-    $user->name = $request->input('name');
-    $user->email = $request->input('email');
-    if ($request->filled('password')) {
-        $user->password = Hash::make($request->input('password'));
-    }
+    // Buscar el usuario por ID
+    $user = User::findOrFail($id);
+
+    // Actualizar los datos
+    $user->firstName = $request->input('firstName');
+    $user->lastName = $request->input('lastName');
+    $user->secondLastName = $request->input('secondLastName');
+    $user->email = $request->input('email'); // Actualizar el correo
+
+    // Guardar los cambios
     $user->save();
 
-    return redirect()->route('profile.edit', $user->id)->with('success', 'Perfil actualizado correctamente.');
+    // Responder con JSON (para AJAX)
+    return response()->json(['message' => 'Usuario actualizado con éxito']);
 }
+
     public function destroy($id)
     {
         $user = User::findOrFail($id);
@@ -62,4 +61,33 @@ public function update(Request $request, $id)
         return redirect()->route('users.index')
             ->with('success', 'User deleted successfully');
     }
+    
+    public function store(Request $request)
+    {
+        // Validación de los datos (asegurando que los datos que estamos recibiendo sean válidos)
+        $validated = $request->validate([
+            'firstName' => 'required|string|max:255',
+            'lastName' => 'required|string|max:255',
+            'secondLastName' => 'required|string|max:255',
+            'username' => 'required|string|unique:users,username|max:255',
+            'email' => 'required|email|unique:users,email|max:255',
+            'password' => 'required|string|min:6',
+        ]);
+    
+        // Crear el nuevo usuario
+        $user = new User();
+        $user->firstName = $request->input('firstName');
+        $user->lastName = $request->input('lastName');
+        $user->secondLastName = $request->input('secondLastName');
+        $user->email = $request->input('email');
+        $user->username = $request->input('username'); // El nombre de usuario generado
+        $user->password = bcrypt($request->input('password')); // Encriptar la contraseña antes de guardarla
+        $user->status = 1; // Puedes asignar un valor predeterminado si es necesario
+        $user->save();
+    
+        // Redirigir o mostrar un mensaje de éxito
+        return redirect()->route('users.index')->with('success', 'Usuario creado exitosamente');
+    }
+    
+
 }

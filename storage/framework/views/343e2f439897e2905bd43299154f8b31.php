@@ -167,7 +167,7 @@
     <div class="footer-content">
         <!-- Sección de marca -->
         <div class="footer-section brand">
-            <h3>Desayunos Maria Elena</h3>
+            <h3>Apis Elena</h3>
             <img src="<?php echo e(asset('imgs/logo3.png')); ?>" alt="Logo de Desayunos Maria Elena" class="logo-footer">
         </div>
 
@@ -202,4 +202,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
 </body>
-</html><?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\desayunosmariaelena\resources\views/paginicio.blade.php ENDPATH**/ ?>
+</html><?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\apis_elena\resources\views/paginicio.blade.php ENDPATH**/ ?>

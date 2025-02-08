@@ -8,13 +8,13 @@
      <link rel="dns-prefetch" href="//fonts.bunny.net">
   <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ asset('css/modals.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/indexPU.css') }}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/modals.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/indexPU.css')); ?>">
 </head>
 <body>
-@extends('layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="AcercaTitulo">Mis usuarios</h1>
@@ -36,28 +36,28 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($users as $index => $user)
+                <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $user->firstName }}</td>
-                        <td>{{ $user->lastName }}</td>
-                        <td>{{ $user->secondLastName }}</td>
-                        <td>{{ $user->email }}</td>
+                        <td><?php echo e($index + 1); ?></td>
+                        <td><?php echo e($user->firstName); ?></td>
+                        <td><?php echo e($user->lastName); ?></td>
+                        <td><?php echo e($user->secondLastName); ?></td>
+                        <td><?php echo e($user->email); ?></td>
                         <td class="text-center">
-                            <button class="btn btn-warning btn-sm editUserBtn" id="" data-id="{{ $user->id }}" title="Editar">
+                            <button class="btn btn-warning btn-sm editUserBtn" id="" data-id="<?php echo e($user->id); ?>" title="Editar">
     <i class="fas fa-edit"></i>
 </button>
 
-                            <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline-block">
-                                @csrf
-                                @method('DELETE')
+                            <form action="<?php echo e(route('users.destroy', $user->id)); ?>" method="POST" class="d-inline-block">
+                                <?php echo csrf_field(); ?>
+                                <?php echo method_field('DELETE'); ?>
                                 <button type="submit" class="btn btn-danger btn-sm" title="Eliminar" onclick="return confirm('¿Seguro que deseas eliminar este usuario?');">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </form>
                         </td>
                     </tr>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </tbody>
         </table>
     </div>
@@ -71,7 +71,7 @@
         <h2 id="modalTitle">Crear usuario</h2>
         <form id="userForm">
             <input type="hidden" id="userId">
-            @csrf
+            <?php echo csrf_field(); ?>
             <input type="hidden" name="_method" id="methodField" value="POST">
 
             <div class="form-group">
@@ -185,7 +185,9 @@ document.getElementById("userForm").addEventListener("submit", function(event) {
 });
 </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 </body>
 </html>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\apis_elena\resources\views/users/index.blade.php ENDPATH**/ ?>

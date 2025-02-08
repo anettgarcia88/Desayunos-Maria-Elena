@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="<?php echo e(asset('css/indexPU.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/modals.css')); ?>">
     <title>Administrar Productos</title>
     
 </head>
@@ -12,40 +13,30 @@
 
 
 <?php $__env->startSection('content'); ?>
-<div class="container">
-    <div class="encabezado">
-        <div class="texto">
-            <h1>Mis productos</h2>
-           
-        </div>
-        <br>
-        <br>
-        <div class="CrearProducto">
-            <a href="<?php echo e(route('productos.create')); ?>" class="btnCrear">Nuevo producto</a>
-            <?php if(session('success')): ?>
-                <div class="alert alert-success">
-                    <?php echo e(session('success')); ?>
-
-                </div>
-            <?php endif; ?>
-        </div>  
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="AcercaTitulo">Mis productos</h1>
+        <button type="button" class="btn btn-primary" id="openModalBtn"> 
+            <i class="fas fa-plus"></i> Nuevo producto 
+        </button>
     </div>
 
-    <table class="table">
-        <thead >
+    <div class="table-responsive">
+        <table class="table table-striped table-hover shadow-sm">
+            <thead class="bg-secondary text-light">
             <tr>
-                <th>ID</th>
+                <th>#</th>
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Cantidad comprada</th>
                 <th>Imagen</th>
-                <th>Acciones</th>
+                <th class="text-center">Acciones</th>
             </tr>
         </thead>
         <tbody>
-            <?php $__currentLoopData = $productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $producto): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = $productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $producto): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                    <td><?php echo e($producto->id); ?></td>
+                    <td><?php echo e($index + 1); ?></td>
                     <td><?php echo e($producto->nombre); ?></td>
                     <td><?php echo e($producto->precio); ?></td>
                     <td><?php echo e($producto->cantidad); ?></td>
@@ -83,4 +74,4 @@
 </body>
 </html>
 
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\desayunosmariaelena\resources\views/productos/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\59172\Downloads\Proyecto de Web II Final (1)\crudProductos\apis_elena\resources\views/productos/index.blade.php ENDPATH**/ ?>
